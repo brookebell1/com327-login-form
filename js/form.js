@@ -1,6 +1,11 @@
 jQuery.noConflict();
 (function( $ ) {
   $(function() {
+    jQuery("#no-js-or-divider").remove();
+    jQuery("#bottomHeaderArea").remove();
+    jQuery("#signupForm").remove();
+    jQuery("#topHeader").text("Sign In or Sign Up");
+    
     var checkbox = CreateNewUserCheckbox();
     jQuery(checkbox).insertAfter("#email");
     
