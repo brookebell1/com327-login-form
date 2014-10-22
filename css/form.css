@@ -143,3 +143,17 @@ a {
   width: 100%;
   z-index: -2;
 }
+
+#header {
+  background-image: linear-gradient(rgb(100, 100, 100) 0%, rgb(14, 14, 14) 100%);
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+img {
+  display: block;
+  text-align: center;
+  margin: auto;
+  max-width: 60%;  
+}

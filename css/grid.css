@@ -38,6 +38,17 @@
 
 @media all and ( min-width: 1100px ) {
   
+  #header {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+  
+  img {
+    margin: 5em auto; 
+  }
+  
   .left-align {
     text-align: left;
   }
