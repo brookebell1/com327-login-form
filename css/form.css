@@ -8,7 +8,7 @@ input[type=submit] {
 
 input[type=text], input[type=email], input[type=password] {
   border: 1px solid #c2c2c2;
-  border-radius: .14em;
+  border-radius: 1em;
 }
 
 button {
