@@ -1,0 +1,42 @@
+input[type=submit] {
+  color: black;
+  text-shadow: 0px 0px 0px;
+  background: rgb(236, 204, 78); /* IMDb gold */
+  border: 1px solid #5b5b5b;
+  border-radius: 1000em;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  border-radius: 1em;
+  border: 1px solid #c2c2c2;
+}
+
+button {
+  border-radius: 1000em;
+  text-shadow: 0px 0px 0px;
+}
+
+#facebook-button {
+  background: rgb(59, 89, 152); 
+  color: white;  
+  border-color: rgb(59, 89, 152);
+  width: 200px;
+}
+
+#google-button {
+  background: rgb(215, 61, 50);
+  color: white;
+  border-color:  rgb(215, 61, 50);
+  width: 200px;
+}
+
+#amazon-button {
+  background: rgb(255, 200, 66);
+  color: black;
+  border-color: rgb(255, 200, 66);
+  width: 200px;
+}
+
+i {
+ margin-top: .1em; 
+}

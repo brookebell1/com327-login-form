@@ -4,17 +4,36 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Login - IMDb</title>
-    <link rel="stylesheet" href="css/formalize.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/formalize.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/jquery.formalize.min.js"></script>
   </head>
   <body>
-    <form>
+    <article id="contentBody">
       <h1>Sign In or Sign Up</h1>
-      <div>
-        <label for="email">Email Address</label>
-        <input id="email" name="email" type="email" />
-      </div>
-    </form>
+      <form>
+        <div id="email">
+          <label for="emailInput">Email Address</label>
+          <input id="emailInput" name="email" type="email" />
+        </div>
+        <div id="password">
+          <label for="passwordInput">Password</label>
+          <input id="passwordInput" name="password" type="password" />
+        </div>
+        <div id="login">
+          <input id="loginButton" value="Log In" type="submit" />
+        </div>
+      </form>
+      
+      <h1>Social Logins</h1>
+      <section>
+        <button id="facebook-button"><i aria-hidden="true" class="fa fa-facebook-square pull-left"></i> Log in with Facebook</button>
+        <button id="google-button"><i aria-hidden="true" class="fa fa-google-plus-square pull-left"></i> Log in with Google</button>
+        <button id="amazon-button"><i aria-hidden="true" class="fa fa-shopping-cart pull-left"></i> Log in with Amazon</button>
+      </section>
+    </article>
   </body>
 </html>
