@@ -25,6 +25,10 @@
             <label for="emailInput">Email Address</label>
             <input id="emailInput" name="email" type="email" />
           </div>
+          <div id="newUser">
+            <input id="newUserCheckbox" name="newUser" type="checkbox" />
+            <label for="newUserCheckbox">I'm new here</label>
+          </div>
           <div id="password">
             <label for="passwordInput">Password</label>
             <input id="passwordInput" name="email" type="password" />
@@ -67,6 +71,13 @@
       </section>
       
       <section id="socialLogins">
+        <div aria-hidden="true" id="social-login-or-divider">
+          <strong class="line-thru">or</strong>
+        </div>
+        <h2>Social Login</h2>
+        <button id="facebook-button"><i aria-hidden="true" class="fa fa-facebook-square"></i> Log in with Facebook</button>
+        <button id="google-button"><i aria-hidden="true" class="fa fa-google-plus-square"></i> Log in with Google</button>
+        <button id="amazon-button"><i aria-hidden="true" class="fa fa-shopping-cart"></i> Log in with Amazon</button>
       </section>
     </article>
     <!--<div class="row" id="header">
