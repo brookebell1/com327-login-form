@@ -14,7 +14,62 @@
     <script src="js/jquery.formalize.min.js"></script>
   </head>
   <body>
-    <div class="row" id="header">
+    <header id="header">
+      <img src="images/New-imdb-logo.png" alt="IMDb logo" width="150" />
+    </header>
+    <article id="page-content" style="width: 50%; margin: 0 auto;">
+      <section id="signIn">
+        <h2>Sign In</h2>
+        <form id="accountForm">
+          <div id="email">
+            <label for="emailInput">Email Address</label>
+            <input id="emailInput" name="email" type="email" />
+          </div>
+          <div id="password">
+            <label for="passwordInput">Password</label>
+            <input id="passwordInput" name="email" type="password" />
+          </div>
+          <div id="login">
+            <input id="loginButton" value="Log In" type="submit" />
+          </div>
+          <div id="forgot-password">
+            <a href="#">Forgot your password?</a>
+          </div>
+        </form>
+      </section>
+      
+      <section id="signUp">
+        <div aria-hidden="true" id="no-js-or-divider">
+          <strong class="line-thru">or</strong>
+        </div>
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+          <div id="signUpEmail">
+            <label for="signUpEmailInput">Email Address</label>
+            <input id="signUpEmailInput" name="signUpEmail" type="email" />
+          </div>
+          <div id="signUpPassword">
+            <label for="signUpPasswordInput">Password</label>
+            <input id="signUpPasswordInput" name="signUpPassword" type="password" />
+          </div>
+          <div id="signUpConfirmPassword">
+            <label for="signUpConfirmPasswordInput">Confirm Password</label>
+            <input id="signUpConfirmPasswordInput" name="signUpConfirmPassword" type="password" />
+          </div>
+          <div id="signUpFullName">
+            <label for="signUpFullNameInput">Full Name</label>
+            <input id="signUpFullNameInput" name="signUpFullName" type="text" />
+          </div>
+          <div id="signUpConfirm">
+            <input id="signUpButton" value="Sign Up" type="submit" />
+          </div>
+        </form>        
+      </section>
+      
+      <section id="socialLogins">
+      </section>
+    </article>
+    <!--<div class="row" id="header">
       <div class="col-1-3"></div>
       <div class="col-1-3">
         <img src="images/New-imdb-logo.png" alt="IMDb logo" width="150" />
@@ -154,6 +209,6 @@
         </div>
       </section>
     </article>
-    <script src="js/form.js"></script>
+    <script src="js/form.js"></script>-->
   </body>
 </html>
