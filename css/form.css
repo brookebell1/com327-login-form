@@ -35,6 +35,8 @@ html {
   text-size-adjust: 100%;
 }
 
+/* Header styles */
+
 #header {
   background-image: linear-gradient(rgb(100, 100, 100) 0%, rgb(14, 14, 14) 100%);
   margin-top: 0;
@@ -50,9 +52,19 @@ img {
   max-width: 60%;  
 }
 
+/* Page Content Styles */
+
+article#page-content {
+ margin: .5em 1em; 
+}
+
+/* Input Styles */
+
 label {
   font-weight: bold;
   font-size: 1em;
+  margin-top: .2em;
+  display: inline-block;
 }
 
 input[type=text], input[type=email], input[type=password] {
@@ -87,7 +99,15 @@ input[type=checkbox] {
 }
 
 #newUser {
-  margin: 0.5em;
+ margin: 0; 
+}
+
+#newUser > label {
+  vertical-align: top
+}
+
+#newUser > input {
+  vertical-align: bottom
 }
 
 h1 {
@@ -98,11 +118,7 @@ h2 {
   font-size: 1.5em;
 }
 
-label {
- /*margin-top: .2em; */
-  margin-top: .2em;
-  display: inline-block;
-}
+/* Social Login Button Styles */
 
 button {
   border-radius: 3em;
@@ -129,13 +145,15 @@ button {
   border-color: rgb(255, 200, 66);
 }
 
-button[id*="-button"] {
-  margin 1em;
+button[id$="button"] {
+ margin-bottom: .5em; 
 }
 
 i {
  margin-top: .1em; 
 }
+
+/* Forgot Password Styles */
 
 a:hover {
   text-decoration: none; 
@@ -145,10 +163,6 @@ a {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
-}
-
-.row > * {
- text-align: center;
 }
 
 /* Page Divider Styles */
@@ -184,8 +198,20 @@ a {
   z-index: -2;
 }
 
-
-
 #socialLogins {
   margin-bottom: .5em; 
+}
+
+@media screen and (min-width: 32em) {
+  article#page-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  article#page-content {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
