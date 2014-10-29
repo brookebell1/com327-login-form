@@ -28,7 +28,7 @@ jQuery.noConflict();
 function CreateNewUserCheckbox($) {
   //Create the surrounding div
   var container = document.createElement("div");
-  $(container).attr("id", "newUser");
+  $(container).attr("id", "newUser").addClass("input-group");
 
   var checkbox = document.createElement("input");
   $(checkbox).attr("id", "newUserCheckbox").attr("name", "isNewUser").attr("type", "checkbox").appendTo(container);
@@ -42,7 +42,7 @@ function CreateNewUserCheckbox($) {
 function CreateFormInput($, type, labelText, id) {
   //Create the surrounding div
   var container = document.createElement("div");
-  $(container).attr("id", id);
+  $(container).attr("id", id).addClass("input-group");
 
   var label = document.createElement("label");
   $(label).attr("for", id.concat("Input")).text(labelText).appendTo(container);
