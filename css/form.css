@@ -35,9 +35,32 @@ html {
   text-size-adjust: 100%;
 }
 
+#header {
+  background-image: linear-gradient(rgb(100, 100, 100) 0%, rgb(14, 14, 14) 100%);
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+img {
+  display: block;
+  text-align: center;
+  margin: 5em auto;
+  padding: 10px;
+  max-width: 60%;  
+}
+
 label {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1em;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  border: 1px solid #c2c2c2;
+  border-radius: 3em;
+  padding: 0 1em;
+  width: 100%;
+  font-size: 1.2em;
 }
 
 input[type=submit] {
@@ -54,21 +77,13 @@ input[type=submit]:hover {
   background: rgb(236, 204, 78); /* IMDb gold */ 
 }
 
-input[type=text], input[type=email], input[type=password] {
-  border: 1px solid #c2c2c2;
-  border-radius: 3em;
-  padding: 0 1em;
-  width: 100%;
-  font-size: 1.2em;
-}
-
 input[type=checkbox] {
   width: 1.5em;
   height: 1.5em;
 }
 
 .input-group {
-  margin: 1em;
+  margin: 0  0 .5em 0;
 }
 
 #newUser {
@@ -136,6 +151,8 @@ a {
  text-align: center;
 }
 
+/* Page Divider Styles */
+
 .line-thru {
   display: block;
   font-size: .875em;
@@ -167,20 +184,8 @@ a {
   z-index: -2;
 }
 
-#header {
-  background-image: linear-gradient(rgb(100, 100, 100) 0%, rgb(14, 14, 14) 100%);
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
 
-img {
-  display: block;
-  text-align: center;
-  margin: auto;
-  max-width: 60%;  
-}
 
-#signupLogin {
- margin-bottom: .5em; 
+#socialLogins {
+  margin-bottom: .5em; 
 }
