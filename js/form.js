@@ -1,98 +1,54 @@
 jQuery.noConflict();
 (function( $ ) {
   $(function() {
-    jQuery("#no-js-or-divider").remove();
-    jQuery("#bottomHeaderArea").remove();
-    jQuery("#signupForm").remove();
-    jQuery("#topHeader").text("Sign In or Sign Up");
-    
-    var checkbox = CreateNewUserCheckbox();
-    jQuery(checkbox).insertAfter("#email");
-    
-    $("#newboxInput").click(function() {
-      if($(this).is(":checked")) {
-        var parent = jQuery("#accountForm");
-        var confirmPasswordRow = CreateInputRow("password", "Confirm Password", "confirmPassword");
-        jQuery(confirmPasswordRow).insertAfter(jQuery("#password"));
-        
-        var fullNameRow = CreateInputRow("text", "Full Name", "name");
-        jQuery(fullNameRow).insertAfter(confirmPasswordRow);
-        
-        jQuery("#loginButton").val("Sign Up");
+    $("#signUp").remove();
+    $("#signIn > h2").text("Sign In or Sign Up");
+
+    var checkbox = CreateNewUserCheckbox($);
+    $(checkbox).insertAfter("#email");
+
+    $("#newUserCheckbox").click(function() {
+      if ($(this).is(":checked")) {
+        var parent = $("#accountForm");
+        var confirmPasswordContainer = CreateFormInput($, "password", "Confirm Password", "confirmPassword");
+        $(confirmPasswordContainer).insertAfter($("#password"));
+
+        var fullNameInputContainer = CreateFormInput($, "text", "Full Name", "fullName");
+        $(fullNameInputContainer).insertAfter(confirmPasswordContainer);
+        $("#loginButton").val("Sign Up");
       } else {
-        jQuery("#confirmPassword").remove();
-        jQuery("#name").remove();
-        jQuery("#loginButton").val("Log In");
+        $("#confirmPassword").remove();
+        $("#fullName").remove();
+        $("#loginButton").val("Log In");
       }
     });
   });
 })(jQuery);
 
-function CreateInputRow(type, labelText, id) {
-  //Create the entire row
-  var row = document.createElement("div");
-  jQuery(row).addClass("row");
-  jQuery(row).attr("id", id);
-  
-  //Create the two columns to surround our content
-  var dummyColumn = document.createElement("div");
-  var dummyColumn2 = document.createElement("div");
-  jQuery(dummyColumn).addClass("col-1-3").appendTo(row);
-  
-  //Create the column that will contain our content
-  var contentColumn = document.createElement("div");
-  jQuery(contentColumn).addClass("col-1-3").appendTo(row);
-  jQuery(dummyColumn2).addClass("col-1-3").appendTo(row);  
-  
-  //Create the row inside our content column
-  var innerRow = document.createElement("div");
-  jQuery(innerRow).addClass("row").appendTo(contentColumn);
-  
-  //Create the column for our label
-  var labelColumn = document.createElement("div");
-  jQuery(labelColumn).addClass("col-1-3 right-align").appendTo(innerRow);
-  
+function CreateNewUserCheckbox($) {
+  //Create the surrounding div
+  var container = document.createElement("div");
+  $(container).attr("id", "newUser");
+
+  var checkbox = document.createElement("input");
+  $(checkbox).attr("id", "newUserCheckbox").attr("name", "isNewUser").attr("type", "checkbox").appendTo(container);
+
   var label = document.createElement("label");
-  jQuery(label).text(labelText);
-  jQuery(label).attr("for", id.concat("Input")).appendTo(labelColumn);
-  
-  var inputColumn = document.createElement("div");
-  jQuery(inputColumn).addClass("col-2-3").appendTo(innerRow);
-  
-  var input = document.createElement("input");
-  jQuery(input).attr("id", id.concat("Input")).attr("name", id).attr("type", type).appendTo(inputColumn);
-  return row;
+  $(label).attr("for", "newUserCheckbox").text("I'm new here").appendTo(container);
+
+  return container;
 }
 
-function CreateNewUserCheckbox() {
-  //Create the entire row
-  var row = document.createElement("div");
-  jQuery(row).addClass("row");
-  jQuery(row).attr("id", "newbox");
-  
-  //Create the two columns to surround our content
-  var dummyColumn = document.createElement("div");
-  var dummyColumn2 = document.createElement("div");
-  jQuery(dummyColumn).addClass("col-1-3").appendTo(row);
-  
-  //Create the column that will contain our content
-  var contentColumn = document.createElement("div");
-  jQuery(contentColumn).addClass("col-1-3").appendTo(row);
-  jQuery(dummyColumn2).addClass("col-1-3").appendTo(row);
-  
-  //Create the row inside our content column
-  var innerRow = document.createElement("div");
-  jQuery(innerRow).addClass("row").appendTo(contentColumn);
-  
-  //Create inner most column
-  var innerColumn = document.createElement("div");
-  jQuery(innerColumn).addClass("col-1-3 right-align").appendTo(innerRow);
-  
-  var checkbox = document.createElement("input");
-  jQuery(checkbox).attr("id", "newboxInput").attr("name", "isnew").attr("type", "checkbox").appendTo(innerColumn);
-  
+function CreateFormInput($, type, labelText, id) {
+  //Create the surrounding div
+  var container = document.createElement("div");
+  $(container).attr("id", id);
+
   var label = document.createElement("label");
-  jQuery(label).attr("for", "newboxInput").text("I'm new here").appendTo(innerColumn);
-  
-  return row;
+  $(label).attr("for", id.concat("Input")).text(labelText).appendTo(container);
+
+  var input = document.createElement("input");
+  $(input).attr("id", id.concat("Input")).attr("name", id).attr("type", type).appendTo(container);
+
+  return container;
 }
