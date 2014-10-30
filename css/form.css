@@ -32,9 +32,6 @@ html {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-}
-
-@font-face {
   font-family: 'Segoe Ui', 'Lato', 'Roboto', Tahoma, Geneva, Verdana, sans-serif ;
 }
 
@@ -149,7 +146,7 @@ button {
 }
 
 button[id$="button"] {
- margin-bottom: .5em; 
+ margin-top: .5em; 
 }
 
 i {
