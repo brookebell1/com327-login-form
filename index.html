@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/formalize.css" />
     <link rel="stylesheet" href="css/form.css" />
-    <!--<link rel="stylesheet" href="css/grid.css" />-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/jquery.formalize.min.js"></script>
   </head>
@@ -17,7 +16,7 @@
     <header id="header">
       <img src="images/New-imdb-logo.png" alt="IMDb logo" width="150" />
     </header>
-    <article id="page-content">
+    <div id="page-content">
       <section id="signIn">
         <h2>Sign In</h2>
         <form id="accountForm">
@@ -73,7 +72,15 @@
         <button id="google-button"><i aria-hidden="true" class="fa fa-google-plus-square"></i> Log in with Google</button>
         <button id="amazon-button"><i aria-hidden="true" class="fa fa-shopping-cart"></i> Log in with Amazon</button>
       </section>
-    </article>
+    </div>
     <script src="js/form.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Lato', 'Roboto']
+        }
+      });
+    </script>
   </body>
 </html>

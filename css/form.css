@@ -28,11 +28,14 @@ Pixels   Ems    Ems @ 16  % of 13
 html {
   font-size: 1.125em;
   line-height: 1.5em;
-  font-family: Segoe Ui, 'Lato', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: 'Segoe Ui', 'Lato', 'Roboto', Tahoma, Geneva, Verdana, sans-serif ;
 }
 
 /* Header styles */
@@ -54,7 +57,7 @@ img {
 
 /* Page Content Styles */
 
-article#page-content {
+div#page-content {
  margin: .5em 1em; 
 }
 
@@ -207,28 +210,28 @@ div#forgot-password {
 }
 
 @media screen and (min-width: 32em) {
-  article#page-content {
+  div#page-content {
     width: 80%;
     margin: .5em auto;
   }
 }
 
 @media screen and (min-width: 48em) {
-  article#page-content {
+  div#page-content {
     width: 60%;
     margin: .5em auto;
   }
 }
 
 @media screen and (min-width: 64em) {
-  article#page-content {
+  div#page-content {
     width: 45%;
     margin: .5em auto;
   }
 }
 
 @media screen and (min-width: 96em) {
-  article#page-content {
+  div#page-content {
     width: 30%;
     margin: .5em auto;
     max-width: 36em;
