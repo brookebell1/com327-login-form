@@ -208,6 +208,13 @@ div#forgot-password {
 
 @media screen and (min-width: 32em) {
   article#page-content {
+    width: 80%;
+    margin: .5em auto;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  article#page-content {
     width: 60%;
     margin: .5em auto;
   }
